@@ -1,8 +1,24 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 export default function Navbar() {
+  const [transparentBackground, setTransparentBackground] = useState(true);
+  window.onscroll = () => {
+    if (window.scrollY > 10) {
+      setTransparentBackground(false);
+    } else {
+      setTransparentBackground(true);
+    }
+  };
   return (
-    <div className="w-full h-16 flex flex-row gap-10 justify-end px-10 fixed top-0 z-20">
+    <div
+      className={
+        transparentBackground
+          ? "w-full h-16 flex flex-row gap-10 justify-end px-10 fixed top-0 z-20"
+          : "w-full bg-black h-16 flex flex-row gap-10 justify-end px-10 fixed top-0 z-20"
+      }
+    >
       <Link
         href="https://www.instagram.com/jonathan.henrich/"
         className="text-white my-auto z-20"
