@@ -9,8 +9,10 @@ export default function Hero() {
         alt="hero"
       ></Image>
       <div className="absolute top-[50vh] left-0 w-full h-[50vh] bg-gradient-to-b from-transparent to-black">
-        <div className="w-full h-full flex flex-col justify-start items-end px-40">
-          <h1 className="text-white text-6xl font-bold">Jonathan Henrich</h1>
+        <div className="w-full h-full flex flex-col justify-start items-end px-24">
+          <h1 className="text-white text-8xl font-bold animate-text-reveal">
+            Jonathan Henrich
+          </h1>
           <p className="text-white text-2xl font-bold">
             musician • songwriter • performer • producer
           </p>
