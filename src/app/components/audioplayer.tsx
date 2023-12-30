@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import { useAudioPlayerContext } from "./audioplayercontext";
 import Image from "next/image";
+import Waveform from "./waveform";
 type Song = {
   title: string;
 };
@@ -110,7 +111,7 @@ export default function AudioPlayer(song: Song) {
       />
       <button
         onClick={togglePlayPause}
-        className="text-5xl row-start-1 row-end-1 col-start-1 col-end-1"
+        className="text-5xl row-start-1 row-end-1 col-start-1 col-end-1 flex justify-center items-center items-center"
       >
         {isPlaying ? (
           <Image
@@ -139,6 +140,9 @@ export default function AudioPlayer(song: Song) {
         onInput={onSliderChange}
         className="w-full cursor-pointer h-[100px] row-start-1 row-end-1 col-start-2 col-end-2 opacity-10"
       />
+      <div className="row-start-1 row-end-1 col-start-2 col-end-2 z-10 h-[100px]">
+        <Waveform url={"/music/" + song.title + ".m4a"} />
+      </div>
     </div>
   );
 }
