@@ -5,7 +5,7 @@ export default function Navcontent() {
     <>
       <Link
         href="https://www.instagram.com/jonathan.henrich/"
-        className="text-white my-auto z-20"
+        className="text-white my-auto z-20 hidden sm:block"
       >
         <Image
           className="filter-invert"
@@ -21,13 +21,13 @@ export default function Navcontent() {
       >
         <Image src="/spotify.png" width="16" height="16" alt="spotify"></Image>
       </Link>
-      <Link href="./" className="text-white my-auto">
+      <Link href="./" className="text-white my-auto hidden sm:block">
         <span>HOME</span>
       </Link>
-      <Link href="./" className="text-white my-auto">
+      <Link href="./" className="text-white my-auto hidden sm:block">
         <span>MUSIC</span>
       </Link>
-      <Link href="./" className="text-white  my-auto">
+      <Link href="./" className="text-white  my-auto hidden sm:block">
         <span>EPK</span>
       </Link>
     </>

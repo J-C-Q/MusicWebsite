@@ -1,8 +1,8 @@
 import FooterLink from "./footerlink";
 export default function Footer() {
   return (
-    <div className="bg-gray-900 text-center shadow-inner">
-      <div className="w-full flex flex-row gap-10 justify-around px-10 mt-20 text-left py-10">
+    <div className="bg-gray-900 text-center shadow-[inset_0_10px_20px_-10px_rgba(0,0,0,1)] text-sm sm:text-xl">
+      <div className="w-full flex flex-row gap-10 justify-around px-10 mt-20 text-left py-10  text-gray-500 flex-wrap">
         <div className="flex flex-col">
           <h3>Lets chat!</h3>
           <FooterLink
@@ -12,7 +12,9 @@ export default function Footer() {
         </div>
         <div className="flex flex-col justify-center">
           <h3>For professional inquiries please refer to:</h3>
-          Julian Böhm Head of Artist Management Künstlermanagement Uwe Kanthak
+          Julian Böhm<br></br> Head of Artist Management<br></br>
+          <br></br>
+          Künstlermanagement Uwe Kanthak
           <FooterLink
             link="https://goo.gl/maps/QcAjPR2yQNbckmhH8"
             text="Hopfenmarkt 31 D-20457 Hamburg"
@@ -39,7 +41,7 @@ export default function Footer() {
           />
         </div>
       </div>
-      © 2024 Jonathan Henrich
+      <h1 className="text-gray-500">© 2024 Jonathan Henrich</h1>
     </div>
   );
 }

@@ -21,9 +21,10 @@ export default function Navbar() {
   return (
     <div
       className={
-        transparentBackground
-          ? "w-full h-16 flex flex-row gap-10 justify-end px-10 fixed top-0 z-20 transition-all ease-in-out duration-0"
-          : " w-full bg-black h-16 flex flex-row gap-10 justify-end px-10 fixed top-0 z-20 transition-all ease-in-out duration-700"
+        "w-full h-16 flex flex-row gap-10 justify-end px-10 fixed top-0 z-20 transition-all ease-in-out " +
+        (transparentBackground
+          ? "bg-transparent duration-0"
+          : " bg-black duration-500")
       }
     >
       <Navcontent />
