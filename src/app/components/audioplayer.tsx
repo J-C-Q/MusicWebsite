@@ -3,7 +3,8 @@ import React, { useState, useEffect, useRef, Suspense } from "react";
 import { useAudioPlayerContext } from "./audioplayercontext";
 import Image from "next/image";
 import WaveSurfer from "wavesurfer.js";
-
+import { FaCirclePlay } from "react-icons/fa6";
+import { FaCirclePause } from "react-icons/fa6";
 type Song = {
   title: string;
   color: string;
@@ -84,22 +85,24 @@ export default function AudioPlayer(song: Song) {
     <div className="grid grid-rows-1 grid-cols-[1fr_3fr] pr-2 h-[100%]">
       <button
         onClick={togglePlayPause}
-        className="row-start-1 row-end-1 col-start-1 col-end-1 relative"
+        className="row-start-1 row-end-1 col-start-1 col-end-1 relative text-5xl sm:text-7xl flex justify-center items-center text-black"
       >
         {isPlaying ? (
-          <Image
-            src="/images/pause.webp"
-            alt="pause"
-            fill={true}
-            className="p-2"
-          />
+          //   <Image
+          //     src="/images/pause.webp"
+          //     alt="pause"
+          //     fill={true}
+          //     className="p-2"
+          //   />
+          <FaCirclePause />
         ) : (
-          <Image
-            src="/images/play.webp"
-            alt="play"
-            fill={true}
-            className="p-2"
-          />
+          //   <Image
+          //     src="/images/play.webp"
+          //     alt="play"
+          //     fill={true}
+          //     className="p-2"
+          //   />
+          <FaCirclePlay />
         )}
       </button>
       <div className="row-start-1 row-end-1 col-start-2 col-end-2">

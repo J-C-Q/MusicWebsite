@@ -1,26 +1,22 @@
 import Link from "next/link";
-import Image from "next/image";
+
+import { FaInstagram } from "react-icons/fa";
+import { FaSpotify } from "react-icons/fa";
 export default function Navcontent() {
   return (
     <>
-      <Link
+      <a
         href="https://www.instagram.com/jonathan.henrich/"
         className="text-white my-auto z-20 hidden sm:block"
       >
-        <Image
-          className="filter-invert"
-          src="/instagram.png"
-          width="16"
-          height="16"
-          alt="instagram"
-        ></Image>
-      </Link>
-      <Link
+        <FaInstagram />
+      </a>
+      <a
         href="https://open.spotify.com/intl-de/artist/139HzhvBYPiCmliF0jkjEl?si=6MP4SqF6RVyyQqEpE7o9rw"
-        className="text-black my-auto"
+        className="text-white my-auto hidden sm:block"
       >
-        <Image src="/spotify.png" width="16" height="16" alt="spotify"></Image>
-      </Link>
+        <FaSpotify />
+      </a>
       <Link href="./" className="text-white my-auto hidden sm:block">
         <span>HOME</span>
       </Link>
