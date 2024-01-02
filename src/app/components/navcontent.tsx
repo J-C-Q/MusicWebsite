@@ -8,12 +8,14 @@ export default function Navcontent() {
       <a
         href="https://www.instagram.com/jonathan.henrich/"
         className="text-white my-auto z-20 hidden sm:block"
+        target="_blank"
       >
         <FaInstagram />
       </a>
       <a
         href="https://open.spotify.com/intl-de/artist/139HzhvBYPiCmliF0jkjEl?si=6MP4SqF6RVyyQqEpE7o9rw"
         className="text-white my-auto hidden sm:block"
+        target="_blank"
       >
         <FaSpotify />
       </a>
