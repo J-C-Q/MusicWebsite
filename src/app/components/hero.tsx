@@ -1,10 +1,12 @@
 import Image from "next/image";
+import heroImage from "/hero.jpg";
+
 export default function Hero() {
   return (
     <div className="w-full h-[100svh] relative grid grid-rows-[5fr_1fr_1fr_3fr_1fr_1fr] grid-cols-[4fr_1fr_4fr]">
       <Image
         className="object-cover object-[10%_10%]  row-start-1 row-end-8 col-start-1 col-end-4"
-        src="/hero.jpg"
+        src={heroImage}
         fill={true}
         placeholder="blur"
         alt="hero"
