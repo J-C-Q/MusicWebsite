@@ -30,6 +30,9 @@ const config: Config = {
         '4xl': '2550px',
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require("tailwind-gradient-mask-image")
+  ],
 }
 export default config
