@@ -1,13 +1,10 @@
-import Image from "next/image";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import MusicPlayer from "./components/musicplayer";
 import { AudioPlayerProvider } from "./components/audioplayercontext";
+import ImageShow from "./components/imageshow";
 import Footer from "./components/footer";
-import { Suspense } from "react";
-import LoadingScaleton from "./components/loadingmusic";
 
-import { FaQuoteLeft } from "react-icons/fa";
 import { FaQuoteRight } from "react-icons/fa";
 export default function Home() {
   return (
@@ -16,7 +13,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <AudioPlayerProvider>
-          <div className="flex flex-wrap gap-10 justify-evenly mx-10 py-12 max-h-[120vw] overflow-y-scroll snap-mandatory snap-y sm:max-h-auto scrollbar-hide sm:gradient-mask-b-90-d scroll-smooth">
+          <div className="flex flex-wrap gap-10 justify-evenly mx-10 py-12 max-h-[120vw] overflow-y-scroll snap-mandatory snap-y sm:max-h-auto scrollbar-hide gradient-mask-b-90-d scroll-smooth">
             <MusicPlayer title="There's You" color="#783038" />
             <MusicPlayer title="Lay With Me" color="#183050" />
             <MusicPlayer title="Change of Character" color="#C83858" />
@@ -42,6 +39,7 @@ export default function Home() {
             win&shy;ning artist Shea Rose.
           </p>
         </div>
+        <ImageShow />
       </main>
       <Footer />
     </>
