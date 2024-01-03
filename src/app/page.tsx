@@ -13,7 +13,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <AudioPlayerProvider>
-          <div className="flex flex-wrap gap-10 justify-evenly mx-10 py-12 max-h-[150vw] overflow-y-scroll snap-mandatory snap-y sm:max-h-auto scrollbar-hide gradient-mask-b-90-d scroll-smooth snap-center">
+          <div className="flex flex-wrap gap-10 justify-evenly mx-10 py-12 max-h-[150vw] overflow-y-scroll snap-mandatory snap-y sm:max-h-auto scrollbar-hide gradient-mask-b-90-d scroll-smooth snap-center sm:snap-none">
             <MusicPlayer title="There's You" color="#783038" />
             <MusicPlayer title="Lay With Me" color="#183050" />
             <MusicPlayer title="Change of Character" color="#C83858" />
