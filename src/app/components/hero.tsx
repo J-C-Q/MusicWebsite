@@ -8,7 +8,7 @@ export default function Hero() {
         fill={true}
         alt="hero"
       ></Image>
-      <div className="absolute top-[30svh] left-0 w-full h-[70svh] bg-gradient-to-b from-transparent to-black z-10"></div>
+      <div className="absolute top-[30svh] left-0 w-full h-[70svh] sm:top-[70svh] sm:h-[30svh] bg-gradient-to-b from-transparent to-black z-10"></div>
       <h1
         className="text-[#fafafa]  font-bold 
         row-start-5 xl:row-start-2 
