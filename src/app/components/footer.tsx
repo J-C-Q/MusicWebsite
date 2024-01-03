@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { RiExternalLinkFill } from "react-icons/ri";
 export default function Footer() {
   return (
-    <div className="bg-[#4D4C4B] text-center shadow-[inset_0_20px_40px_-00px_rgba(0,0,0,1)] text-sm sm:text-xl">
+    <div className="bg-[#4D4C4B] text-center shadow-[inset_0_10px_40px_-10px_rgba(0,0,0,1)] text-sm sm:text-xl">
       <div className="w-full flex flex-row gap-10 justify-around px-10 mt-20 text-left py-10  text-gray-400 flex-wrap">
         <div className="flex flex-col">
           <h3>Lets chat!</h3>

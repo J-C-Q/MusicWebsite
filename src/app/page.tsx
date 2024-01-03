@@ -9,11 +9,11 @@ import { FaQuoteRight } from "react-icons/fa";
 export default function Home() {
   return (
     <>
-      <main className="rounded-b-xl">
+      <main className="rounded-b-xl ">
         <Navbar />
         <Hero />
         <AudioPlayerProvider>
-          <div className="flex flex-wrap gap-10 justify-evenly mx-10 py-12 max-h-[120vw] overflow-y-scroll snap-mandatory snap-y sm:max-h-auto scrollbar-hide gradient-mask-b-90-d scroll-smooth">
+          <div className="flex flex-wrap gap-10 justify-evenly mx-10 py-12 max-h-[150vw] overflow-y-scroll snap-mandatory snap-y sm:max-h-auto scrollbar-hide gradient-mask-b-90-d scroll-smooth snap-center">
             <MusicPlayer title="There's You" color="#783038" />
             <MusicPlayer title="Lay With Me" color="#183050" />
             <MusicPlayer title="Change of Character" color="#C83858" />

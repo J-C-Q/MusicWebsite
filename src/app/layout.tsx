@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="snap-proximity snap-y">
       <body className={inter.className}>
         {children}
         <SpeedInsights />
