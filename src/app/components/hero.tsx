@@ -6,6 +6,7 @@ export default function Hero() {
         className="object-cover object-[10%_10%]  row-start-1 row-end-8 col-start-1 col-end-4"
         src="/hero.jpg"
         fill={true}
+        placeholder="blur"
         alt="hero"
       ></Image>
       <div className="absolute top-[30svh] left-0 w-full h-[70svh] xl:top-[70svh] xl:h-[30svh] bg-gradient-to-b from-transparent to-black z-10"></div>
