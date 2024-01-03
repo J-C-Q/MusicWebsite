@@ -8,14 +8,14 @@ export default function Hero() {
         fill={true}
         alt="hero"
       ></Image>
-      <div className="absolute top-[30svh] left-0 w-full h-[70svh] sm:top-[70svh] sm:h-[30svh] bg-gradient-to-b from-transparent to-black z-10"></div>
+      <div className="absolute top-[30svh] left-0 w-full h-[70svh] xl:top-[70svh] xl:h-[30svh] bg-gradient-to-b from-transparent to-black z-10"></div>
       <h1
         className="text-[#fafafa]  font-bold 
         row-start-5 xl:row-start-2 
         row-end-6 xl:row-end-3 
-      col-start-1 md:col-start-1 xl:col-start-3 
-      col-end-4 md:col-end-3   xl:col-end-4  
-      text-4xl md:text-6xl xl:text-8xl 
+      col-start-1  md:col-start-1 xl:col-start-3
+      col-end-4  md:col-end-3 xl:col-end-4  
+      text-4xl md:text-4xl xl:text-5xl 2xl:text-7xl 3xl:text-8xl 4xl:text-9xl
       z-10 text-center
       bg-gradient-to-r from-[#ffffff] to-[#302c2a] inline-block text-transparent bg-clip-text
       whitespace-nowrap"
@@ -24,7 +24,7 @@ export default function Hero() {
       </h1>
       <p
         className="text-[#fafafa]  font-bold 
-        text-sm md:text-2xl xl:text-4xl
+        text-sm md:text-sm xl:text-lg 2xl:text-xl xl:text-2xl 4xl:text-3xl
         row-start-6 xl:row-start-3 
         row-end-7 xl:row-end-4 
         col-start-1 md:col-start-1 xl:col-start-3 
