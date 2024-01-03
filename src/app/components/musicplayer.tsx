@@ -13,10 +13,10 @@ export default function MusicPlayer(song: Song) {
           alt={song.title + " cover"}
           fill={true}
           sizes="400px"
-          className="object-cover rounded-t-xl"
+          className="object-cover rounded-t-lg aspect-square"
         ></Image>
       </div>
-      <div className="row-start-2 row-end-2 col-start-1 col-end-3 bg-white rounded-b-xl relative">
+      <div className="row-start-2 row-end-2 col-start-1 col-end-3 bg-[#A19F9E] shadow-[inset_0_5px_10px_-5px_rgba(0,0,0,1)] rounded-b-lg relative">
         <AudioPlayer title={song.title} color={song.color} />
       </div>
     </div>

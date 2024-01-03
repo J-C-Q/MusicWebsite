@@ -1,8 +1,8 @@
 import FooterLink from "./footerlink";
 export default function Footer() {
   return (
-    <div className="bg-gray-900 text-center shadow-[inset_0_10px_20px_-10px_rgba(0,0,0,1)] text-sm sm:text-xl">
-      <div className="w-full flex flex-row gap-10 justify-around px-10 mt-20 text-left py-10  text-gray-500 flex-wrap">
+    <div className="bg-[#4D4C4B] text-center shadow-[inset_0_20px_40px_-00px_rgba(0,0,0,1)] text-sm sm:text-xl">
+      <div className="w-full flex flex-row gap-10 justify-around px-10 mt-20 text-left py-10  text-gray-400 flex-wrap">
         <div className="flex flex-col">
           <h3>Lets chat!</h3>
           <FooterLink
