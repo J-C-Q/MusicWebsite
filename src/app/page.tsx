@@ -3,6 +3,7 @@ import Hero from "./components/hero";
 import MusicPlayer from "./components/musicplayer";
 import { AudioPlayerProvider } from "./components/audioplayercontext";
 import ImageShow from "./components/imageshow";
+import ImageShow2 from "./components/imageshow2";
 import Footer from "./components/footer";
 
 import { FaQuoteRight } from "react-icons/fa";
@@ -40,6 +41,7 @@ export default function Home() {
           </p>
         </div>
         <ImageShow />
+        {/* <ImageShow2 /> */}
       </main>
       <Footer />
     </>

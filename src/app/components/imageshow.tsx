@@ -29,6 +29,11 @@ export default function ImageShow() {
 
   const handleMaximize = () => {
     setMaximizse(!maximize);
+    if (!maximize) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
     if (scrollRef.current) {
       scrollRef.current.scrollLeft = 0;
     }
@@ -38,13 +43,11 @@ export default function ImageShow() {
     const interval = setInterval(() => {
       if (scrollRef.current) {
         let newScrollLeft = scrollRef.current.scrollLeft;
+        // console.log(scrollRef.current?.clientWidth);
         if (!maximize) {
           newScrollLeft += 1;
         }
-        if (
-          newScrollLeft >=
-          (scrollRef.current.scrollWidth - scrollRef.current.clientWidth) * 0.56
-        ) {
+        if (newScrollLeft - 3 >= scrollRef.current.scrollWidth / 2) {
           newScrollLeft = 0;
         }
         if (!maximize) {
@@ -54,16 +57,16 @@ export default function ImageShow() {
     }, 40); // Adjust scrolling speed by changing the interval time
 
     return () => clearInterval(interval);
-  }, [maximize]);
+  }, [maximize, images.length]);
 
   return (
     <div
       ref={scrollRef}
       className={
-        "flex flex-row gap-2 bg-black overflow-scroll scrollbar-hide  w-[100vw]  " +
+        "flex flex-row gap-2 bg-black  scrollbar-hide   " +
         (maximize
-          ? "fixed top-0 h-[100vh] items-center snap-mandatory snap-x z-20"
-          : "relative mt-20 h-[30vh] gradient-mask-r-90-d")
+          ? "fixed top-0 h-[100vh] items-center snap-mandatory overflow-scroll snap-x z-20 transition-all duration-500 ease-in-out"
+          : "relative mt-20 h-[30vh] gradient-mask-r-90-d overflow-hidden ")
       }
       onClick={handleMaximize}
     >
@@ -72,8 +75,10 @@ export default function ImageShow() {
           src={image}
           alt="image"
           className={
-            "rounded-xl  object-cover relative " +
-            (maximize ? "h-auto w-[100vw] snap-center" : "h-[30vh] w-fit")
+            "rounded-lg object-cover relative transition-all duration-500 ease-in-out " +
+            (maximize
+              ? "h-auto w-screen xl:w-auto sm:h-screen snap-center"
+              : "h-[30vh] w-fit")
           }
           placeholder="blur"
           key={index}

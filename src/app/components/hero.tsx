@@ -2,6 +2,7 @@ import Image from "next/image";
 import heroImage from "../../../public/hero.jpg";
 
 export default function Hero() {
+  const text = "musician • songwriter • performer • producer";
   return (
     <div className="w-full h-[100svh] relative grid grid-rows-[5fr_1fr_1fr_3fr_1fr_1fr] grid-cols-[4fr_1fr_4fr]">
       <Image
@@ -34,9 +35,20 @@ export default function Hero() {
         col-end-4 md:col-end-3 xl:col-end-4  
         z-10 text-center
         bg-gradient-to-r from-[#ffffff] to-[#302c2a] inline-block text-transparent bg-clip-text
-        whitespace-nowrap"
+        whitespace-nowrap
+        overflow-hidden
+        h-fit
+        leading-6"
       >
-        musician • songwriter • performer • producer
+        {text.match(/./gu)!.map((char, index) => (
+          <span
+            className="animate-text-reveal inline-block [animation-fill-mode:backwards]"
+            key={`${char}-${index}`}
+            style={{ animationDelay: `${index * 0.05}s` }}
+          >
+            {char === " " ? "\u00A0" : char}
+          </span>
+        ))}
       </p>
     </div>
   );
