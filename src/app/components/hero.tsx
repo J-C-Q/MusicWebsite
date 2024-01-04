@@ -28,7 +28,7 @@ export default function Hero() {
       </h1>
       <p
         className="text-[#fafafa]  font-bold 
-        text-sm md:text-sm xl:text-lg 2xl:text-xl xl:text-2xl 4xl:text-3xl
+        text-sm md:text-sm lg:text-md xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-3xl
         row-start-6 xl:row-start-3 
         row-end-7 xl:row-end-4 
         col-start-1 md:col-start-1 xl:col-start-3 
@@ -44,7 +44,7 @@ export default function Hero() {
           <span
             className="animate-text-reveal inline-block [animation-fill-mode:backwards]"
             key={`${char}-${index}`}
-            style={{ animationDelay: `${index * 0.05}s` }}
+            style={{ animationDelay: `${index * 0.1}s` }}
           >
             {char === " " ? "\u00A0" : char}
           </span>

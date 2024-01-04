@@ -15,7 +15,6 @@ const config: Config = {
       },
       animation: {
         "text-reveal": "text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s",
-        "text-background": "text-background linear forwards"
       },
       keyframes: {
         "text-reveal": {
@@ -26,14 +25,6 @@ const config: Config = {
             transform: "translate(0, 0)",
           },
         },
-        "text-background": {
-            "0%": {
-                "background-position": "50% 0%",
-            },
-            "100%": {
-                "background-position": "50% 100%",
-            },
-            },
             
       },
     },
