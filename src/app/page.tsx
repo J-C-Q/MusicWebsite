@@ -21,7 +21,7 @@ export default function Home() {
             <MusicPlayer title="I Do" color="#984808" />
           </div>
         </AudioPlayerProvider>
-        <div className=" text-md sm:text-4xl px-5 sm:px-20 bg-gradient-to-b from-[#ffffff] to-[#302c2a] inline-block text-transparent bg-clip-text font-bold">
+        <div className=" text-md sm:text-4xl px-5 sm:px-20 bg-gradient-to-b from-[#ffffff] to-[#302c2a] inline-block text-transparent bg-clip-text font-bold snap-center">
           <FaQuoteRight className="text-white mt-10" />
           <p>
             When I was 15, I moved away from home to chase my child&shy;hood

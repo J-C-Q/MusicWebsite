@@ -63,7 +63,7 @@ export default function ImageShow() {
     <div
       ref={scrollRef}
       className={
-        "flex flex-row gap-2 bg-black  scrollbar-hide   " +
+        "flex flex-row gap-2 bg-black  scrollbar-hide snap-center " +
         (maximize
           ? "fixed top-0 h-[100vh] items-center snap-mandatory overflow-scroll snap-x z-20 transition-all duration-500 ease-in-out"
           : "relative mt-20 h-[30vh] gradient-mask-r-90-d overflow-hidden ")
