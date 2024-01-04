@@ -21,8 +21,8 @@ export default function Home() {
             <MusicPlayer title="I Do" color="#984808" />
           </div>
         </AudioPlayerProvider>
-        <div className=" text-md sm:text-4xl px-5 sm:px-20 bg-gradient-to-b from-[#ffffff] to-[#302c2a] inline-block text-transparent bg-clip-text font-bold snap-center">
-          <FaQuoteRight className="text-white mt-10" />
+        <div className=" text-md sm:text-4xl px-5 sm:px-20 [background-image:linear-gradient(#302c2a,#302c2a,#302c2a,#ffffff,#302c2a,#302c2a,#302c2a)] text-transparent bg-clip-text font-bold snap-align-none [background-attachment:fixed] [background-size:100%_100%] bg-center bg-no-repeat">
+          <FaQuoteRight className="text-[#302c2a] mt-10" />
           <p>
             When I was 15, I moved away from home to chase my child&shy;hood
             dream of be&shy;com&shy;ing a pop star. Be&shy;fore I turned 21 I

@@ -44,7 +44,7 @@ export default function Navcontent({ showMenu }: Props) {
         <span>MUSIC</span>
       </Link>
       <Link
-        href="./"
+        href="./EPK"
         className={
           "text-[#A19F9E] my-auto sm:block" + (showMenu ? " block" : " hidden")
         }
