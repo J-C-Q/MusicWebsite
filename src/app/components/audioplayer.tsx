@@ -5,9 +5,12 @@ import Image from "next/image";
 import WaveSurfer from "wavesurfer.js";
 import { FaCirclePlay } from "react-icons/fa6";
 import { FaCirclePause } from "react-icons/fa6";
+
 type Song = {
   title: string;
   color: string;
+  peaks?: (number[] | Float32Array)[] | undefined;
+  duration?: number;
 };
 export default function AudioPlayer(song: Song) {
   const waveformRef = useRef<HTMLDivElement>(null);
@@ -18,6 +21,8 @@ export default function AudioPlayer(song: Song) {
   // Toggle play/pause
   const togglePlayPause = () => {
     if (waveformRef.current) {
+      //   console.log(wavesurfer.current?.exportPeaks());
+      //   console.log(wavesurfer.current?.getDuration());
       if (playingAudio !== song.title && playingAudio !== null) {
         // Pause the currently playing audio
         wavesurfer.current?.pause();
@@ -65,6 +70,8 @@ export default function AudioPlayer(song: Song) {
         fillParent: true,
         height: "auto",
         barHeight: 0.6,
+        peaks: song.peaks,
+        duration: song.duration,
       });
 
       wavesurfer.current.load("/music/" + song.title + ".m4a");
