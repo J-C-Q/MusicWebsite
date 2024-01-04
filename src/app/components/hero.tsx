@@ -22,7 +22,8 @@ export default function Hero() {
       text-4xl md:text-4xl xl:text-5xl 2xl:text-7xl 3xl:text-8xl 4xl:text-9xl
       z-10 text-center
       bg-gradient-to-r from-[#ffffff] to-[#302c2a] inline-block text-transparent bg-clip-text
-      whitespace-nowrap"
+      whitespace-nowrap
+      "
       >
         Jonathan Henrich
       </h1>
