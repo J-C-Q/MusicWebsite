@@ -49,6 +49,9 @@ export default function ImageShow() {
         }
         if (newScrollLeft - 3 >= scrollRef.current.scrollWidth / 2) {
           newScrollLeft = 0;
+          if (maximize) {
+            scrollRef.current.scrollLeft = newScrollLeft;
+          }
         }
         if (!maximize) {
           scrollRef.current.scrollLeft = newScrollLeft;
@@ -65,7 +68,7 @@ export default function ImageShow() {
       className={
         "flex flex-row gap-2 bg-black  scrollbar-hide snap-center " +
         (maximize
-          ? "fixed top-0 h-[100vh] items-center snap-mandatory overflow-scroll snap-x z-20 transition-all duration-500 ease-in-out"
+          ? "fixed top-0 h-[100vh] items-center snap-mandatory overflow-scroll snap-x z-20 transition-all duration-500 ease-in-out scroll-auto"
           : "relative mt-20 h-[30vh] gradient-mask-r-90-d overflow-hidden ")
       }
       onClick={handleMaximize}
@@ -75,7 +78,7 @@ export default function ImageShow() {
           src={image}
           alt="image"
           className={
-            "rounded-lg object-cover relative transition-all duration-500 ease-in-out " +
+            "rounded-lg object-cover relative " +
             (maximize
               ? "h-auto w-screen xl:w-auto sm:h-screen snap-center"
               : "h-[30vh] w-fit")
